@@ -65,7 +65,7 @@ import { api } from '@/utils/client/api'
  */
 
 export const TodoList = ({ tabs }: { tabs: string }) => {
-  const [parent, enableAnimations] = useAutoAnimate()
+  const [parent] = useAutoAnimate()
   const apiContext = api.useContext()
 
   const { data: todos = [] } = api.todo.getAll.useQuery({
